@@ -42,3 +42,32 @@ CREATE TABLE Bookings (
     FOREIGN KEY (passenger_id) REFERENCES Passengers(passenger_id),
     FOREIGN KEY (trip_id) REFERENCES Trips(trip_id)
 );
+
+CREATE TABLE Employee (
+  employee_id INT NOT NULL PRIMARY KEY,
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  phone_number VARCHAR(20) NOT NULL,
+  job_title VARCHAR(50) NOT NULL,
+  hire_date DATE NOT NULL,
+  salary DECIMAL(10,2) NOT NULL
+);
+
+CREATE TABLE Driver (
+  driver_id INT NOT NULL PRIMARY KEY,
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
+  license_number VARCHAR(20) NOT NULL,
+  vehicle_assignment VARCHAR(50) NOT NULL,
+  shift_schedule VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Payroll (
+  payroll_id INT NOT NULL PRIMARY KEY,
+  employee_id INT NOT NULL,
+  pay_period_start DATE NOT NULL,
+  pay_period_end DATE NOT NULL,
+  amount_paid DECIMAL(10,2) NOT NULL,
+  FOREIGN KEY (employee_id) REFERENCES Employee (employee_id)
+);
