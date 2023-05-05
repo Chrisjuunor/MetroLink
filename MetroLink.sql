@@ -63,15 +63,6 @@ CREATE TABLE Driver (
   shift_schedule VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE Payroll (
-  payroll_id INT NOT NULL PRIMARY KEY,
-  employee_id INT NOT NULL,
-  pay_period_start DATE NOT NULL,
-  pay_period_end DATE NOT NULL,
-  amount_paid DECIMAL(10,2) NOT NULL,
-  FOREIGN KEY (employee_id) REFERENCES Employee (employee_id)
-);
-
 INSERT INTO Routes (route_id, route_name, route_type) VALUES
 (1, 'Route A', 'Local'),
 (2, 'Route B', 'Express'),
@@ -112,8 +103,3 @@ INSERT INTO Driver (driver_id, first_name, last_name, license_number, vehicle_as
 (2, 'Sarah', 'Lee', '67890', 'Mini Bus 2', 'Tuesday-Saturday 10am-7pm'),
 (3, 'Michael', 'Wilson', '54321', 'Coach 3', 'Wednesday-Sunday 12pm-9pm');
 
-INSERT INTO Payroll (payroll_id, employee_id, pay_period_start, pay_period_end, amount_paid)
-VALUES 
-  (1, 101, '2022-04-01', '2022-04-15', 50000.00),
-  (2, 102, '2022-04-01', '2022-04-15', 60000.00),
-  (3, 103, '2022-04-01', '2022-04-15', 70000.00);
