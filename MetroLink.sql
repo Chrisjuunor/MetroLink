@@ -84,9 +84,9 @@ INSERT INTO Trips (trip_id, route_id, vehicle_id, start_time, end_time) VALUES
 (3, 3, 3, '2023-05-05 11:00:00', '2023-05-05 12:00:00');
 
 INSERT INTO Passengers (passenger_id, passenger_name, passenger_email, passenger_phone) VALUES
-(1, 'John Smith', 'john.smith@example.com', '08024344560'),
-(2, 'Jane Doe', 'jane.doe@example.com', '09000033356'),
-(3, 'Bob Johnson', 'bob.johnson@example.com', '07067854312');
+(1, 'John Smith', 'john.smith@example.com', '2348024344560'),
+(2, 'Jane Doe', 'jane.doe@example.com', '2349000033356'),
+(3, 'Bob Johnson', 'bob.johnson@example.com', '2347067854312');
 
 INSERT INTO Bookings (bookings_id, passenger_id, trip_id, reservation_time) VALUES
 (1, 1, 1, '2023-05-05 08:00:00'),
@@ -94,9 +94,9 @@ INSERT INTO Bookings (bookings_id, passenger_id, trip_id, reservation_time) VALU
 (3, 3, 3, '2023-05-05 10:00:00');
 
 INSERT INTO Employee (employee_id, first_name, last_name, email, phone_number, job_title, hire_date, salary) VALUES
-(1, 'John', 'Doe', 'john.doe@example.com', '555-1234', 'Manager', '2020-01-01', 50000.00),
-(2, 'Jane', 'Smith', 'jane.smith@example.com', '555-5678', 'Assistant Manager', '2021-01-01', 40000.00),
-(3, 'Bob', 'Johnson', 'bob.johnson@example.com', '555-9012', 'Driver', '2022-01-01', 30000.00);
+(1, 'John', 'Doe', 'john.doe@example.com', '2343455551234', 'Manager', '2020-01-01', 50000.00),
+(2, 'Jane', 'Smith', 'jane.smith@example.com', '2343465555678', 'Assistant Manager', '2021-01-01', 40000.00),
+(3, 'Bob', 'Johnson', 'bob.johnson@example.com', '2346785559012', 'Driver', '2022-01-01', 30000.00);
 
 INSERT INTO Driver (driver_id, first_name, last_name, license_number, vehicle_assignment, shift_schedule) VALUES
 (1, 'David', 'Brown', '12345', 'Bus 1', 'Monday-Friday 8am-5pm'),
